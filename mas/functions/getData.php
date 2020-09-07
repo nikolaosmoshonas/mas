@@ -1,0 +1,35 @@
+<?php 
+
+
+function getHost()
+{
+    $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+    return $hostname;
+}
+
+function getLocalIP()
+{
+    $localIP = gethostbyname(gethostname());
+    return $localIP;
+}
+
+function getPuplicIP()
+{
+    $publicIP = $_SERVER['REMOTE_ADDR'];
+    return $publicIP;
+}
+
+function getDiskSpace()
+{
+    $bytes = disk_free_space("C:");
+    $si_prefix = array( 'B', 'KB', 'MB', 'GB', 'TB', 'EB', 'ZB', 'YB' );
+    $base = 1024;
+    $class = min((int)log($bytes , $base) , count($si_prefix) - 1); 
+
+    $diskspace = sprintf('%1.2f' , $bytes / pow($base,$class)) . ' ' . $si_prefix[$class] . '<br />';
+    return $diskspace;
+}
+
+
+
+?>

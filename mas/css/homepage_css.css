@@ -1,0 +1,35 @@
+#home{
+    margin-top: 20%;
+    
+}
+
+.carousel{
+    margin-top: 30%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #343A40;
+  }
+
+  .btn{
+      background-color: #5a2c87;
+      color: white;
+  }
+
+  body{
+
+    background-image: url('../img/biblio2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+   }
+   h1, p{
+       color: white;
+       word-spacing: 5px;
+   }
+   
